@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver's Tech | Genuine Tech Repair & Consultation</title>
+    <style>
+        :root {
+            --purple: #6a2c91;
+            --teal: #4db6ac;
+            --dark: #222222;
+            --light: #f9f9f9;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--white);
+            padding: 2.5rem 1rem;
+            text-align: center;
+            border-bottom: 4px solid var(--teal);
+        }
+
+        .logo-area h1 {
+            font-size: 3rem;
+            color: var(--purple);
+            font-weight: bold;
+            letter-spacing: -1px;
+        }
+
+        .logo-area .tech-box {
+            display: inline-block;
+            background-color: var(--teal);
+            color: var(--white);
+            padding: 0.2rem 1rem;
+            font-size: 2.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-top: -10px;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hours-badge {
+            margin-top: 0.8rem;
+            display: inline-block;
+            background: var(--purple);
+            color: var(--white);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            background: var(--white);
+            padding: 2.5rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--purple);
+            margin-bottom: 0.5rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .section-intro {
+            text-align: center;
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: var(--light);
+            padding: 1.5rem;
+            border-radius: 6px;
+            border-left: 5px solid var(--teal);
+        }
+
+        .contact-card h3 {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contact-card a {
+            font-size: 1.2rem;
+            color: var(--dark);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .contact-card a:hover {
+            color: var(--purple);
+            text-decoration: underline;
+        }
+
+        /* Pricing Tables & Grids */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .pricing-table th, .pricing-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .pricing-table th {
+            background-color: var(--light);
+            color: var(--purple);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .pricing-table td strong {
+            color: var(--dark);
+        }
+
+        .price-col {
+            font-weight: bold;
+            color: var(--teal);
+            white-space: nowrap;
+            text-align: right;
+        }
+
+        .pricing-table th:last-child {
+            text-align: right;
+        }
+
+        /* B2B Card Grid Layout Alternative */
+        .b2b-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .b2b-card {
+            background: var(--light);
+            border-top: 4px solid var(--purple);
+            padding: 1.5rem;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .b2b-card h3 {
+            font-size: 1.1rem;
+            color: var(--purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .b2b-card p {
+            font-size: 0.95rem;
+            color: #444;
+            margin-bottom: 1rem;
+        }
+
+        .b2b-price {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--teal);
+            border-top: 1px dashed var(--border-color);
+            padding-top: 0.75rem;
+        }
+
+        /* Tips Grid */
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tip-item {
+            background: var(--light);
+            padding: 1rem 1.2rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--purple);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--dark);
+            color: var(--white);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+            .pricing-table, .pricing-table tbody, .pricing-table tr, .pricing-table td, .pricing-table th {
+                display: block;
+            }
+            .pricing-table tr {
+                margin-bottom: 1.5rem;
+                border-bottom: 2px solid var(--purple);
+                padding-bottom: 0.5rem;
+            }
+            .pricing-table td {
+                text-align: left !important;
+                border: none;
+                padding: 0.4rem 0;
+            }
+            .pricing-table th {
+                display: none;
+            }
+            .price-col {
+                color: var(--purple);
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo-area">
+            <h1>Driver's</h1>
+            <div class="tech-box">Tech</div>
+        </div>
+        <p class="tagline">Genuine Tech Repair & Consultation</p>
+        <div class="hours-badge">Hours: Sunday – Thursday | 10:00 AM – 4:00 PM</div>
+    </header>
+
+    <main>
+        <!-- Contact Section -->
+        <section>
+            <h2>Get in Touch</h2>
+            <p class="section-intro">Reach out to us directly for professional support, diagnostics, and appointments.</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>Call or Text</h3>
+                    <a href="tel:3174173716">317-417-3716</a>
+                </div>
+                <div class="contact-card">
+                    <h3>Email Us</h3>
+                    <a href="mailto:DriversTechRepair@Gmail.com">DriversTechRepair@Gmail.com</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Retail & In-Shop Services -->
+        <section>
+            <h2>Retail & In-Shop Services</h2>
+            <p class="section-intro">Professional troubleshooting, custom builds, and routine maintenance for your home or personal computers.</p>
+            
+            <table class="pricing-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Description</th>
+                        <th style="text-align: right;">Rate</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Reformat / Reload</strong></td>
+                        <td>Wiping the storage drive clean and reinstalling the operating system.</td>
+                        <td class="price-col">Windows: $200<br>Apple: $300</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Basic Custom Build</strong></td>
+                        <td>Professional assembly using parts supplied by the client.</td>
+                        <td class="price-col">$300</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Windows Install & Updates</strong></td>
+                        <td>Fresh installation of Windows equipped with all current system updates.</td>
+                        <td class="price-col">$200 <span style="font-size:0.8rem; font-weight:normal; color:#666;"><br>($300 if license needed)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Diagnostics</strong></td>
+                        <td>Professional troubleshooting and problem evaluation.</td>
+                        <td class="price-col">$50 <span style="font-size:0.8rem; font-weight:normal; color:#666;"><br>(Waived if fixable)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Basic One-Page Website</strong></td>
+                        <td>Custom responsive single-page web development. Plus optional extras.</td>
+                        <td class="price-col">$1,000</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Remote Support</strong></td>
+                        <td>Troubleshooting over the phone or via secure remote software. Pro-rated up to the quarter hour.</td>
+                        <td class="price-col">$100 / hour</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- B2B Services -->
+        <section>
+            <h2>B2B Contractor Services</h2>
+            <p class="section-intro">Specialized contract solutions to support business operations, growth, administrative management, and technical coverage.</p>
+            
+            <div class="b2b-grid">
+                <div class="b2b-card">
+                    <div>
+                        <h3>Communication Management</h3>
+                        <p>Dedicated call answering, following up on missed calls, and comprehensive message taking.</p>
+                    </div>
+                    <div class="b2b-price">$250 / week</div>
+                </div>
+
+                <div class="b2b-card">
+                    <div>
+                        <h3>On-Site Tech Coverage</h3>
+                        <p>Technician availability for diagnostics, desktop/laptop repairs, and consultation.<br><small>Mon–Thu 8:30 AM–5:00 PM, Fri 8:30 AM–4:30 PM</small></p>
+                    </div>
+                    <div class="b2b-price">$100 / hour</div>
+                </div>
+
+                <div class="b2b-card">
+                    <div>
+                        <h3>Digital Content Creation</h3>
+                        <p>1 short ad clip (up to 1 min) or 1 image with curated text, posted to up to 3 provided social media accounts.</p>
+                    </div>
+                    <div class="b2b-price">$50 / weekday</div>
+                </div>
+
+                <div class="b2b-card">
+                    <div>
+                        <h3>Admin & Financial Operations</h3>
+                        <p>Billing, invoicing, asset recovery, recycling pickup scheduling, and external accounts receivable collection.</p>
+                    </div>
+                    <div class="b2b-price">$300 / week</div>
+                </div>
+
+                <div class="b2b-card">
+                    <div>
+                        <h3>Sales Closing</h3>
+                        <p>Interception and closing of leads with set expectations, fully prepared for business hand-off and adoption.</p>
+                    </div>
+                    <div class="b2b-price">$500 / week</div>
+                </div>
+
+                <div class="b2b-card">
+                    <div>
+                        <h3>Travel & Trip Fee</h3>
+                        <p>Visits to non-primary locations. Begins within 5 miles of business location; increases for distance.</p>
+                    </div>
+                    <div class="b2b-price">$30 <span style="font-size:0.8rem; font-weight:normal; color:#666;">/ first 5 mi<br>(+$10 per subsequent 5 mi)</span></div>
+                </div>
+
+                <div class="b2b-card" style="grid-column: 1 / -1; border-top-color: var(--teal);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                        <div>
+                            <h3>Video Editing & Sound Design</h3>
+                            <p style="margin-bottom: 0;">Specialized multimedia post-production services tailored to your project requirements.</p>
+                        </div>
+                        <div class="b2b-price" style="border-top: none; padding-top: 0;">TBD</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Driver's Tips Section -->
+        <section>
+            <h2>Driver's Tips</h2>
+            <p class="section-intro">Quick advice and best practices from our technical experts.</p>
+            <div class="tips-grid">
+                <div class="tip-item">💡 Microsoft doesn't need you to call them</div>
+                <div class="tip-item">🚫 Don’t click pop-ups or “urgent” ads</div>
+                <div class="tip-item">🔄 Restart WiFi: Unplug for 30 Seconds</div>
+                <div class="tip-item">💾 Save your work often (Ctrl+S)</div>
+                <div class="tip-item">⌨️ If Frozen: Ctrl + Alt + Delete</div>
+                <div class="tip-item">🔌 Reboot Before Calling</div>
+                <div class="tip-item">📅 Back-up Monthly</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Driver's Tech LLC. Registered in Indiana. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
