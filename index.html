@@ -130,6 +130,10 @@
             color: var(--dark);
             font-weight: bold;
             text-decoration: none;
+            word-break: break-word; /* Prevents long emails from breaking layouts */
+            overflow-wrap: break-word;
+            display: inline-block;
+            max-width: 100%;
         }
 
         .contact-card a:hover {
