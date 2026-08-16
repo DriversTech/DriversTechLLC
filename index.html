@@ -102,10 +102,10 @@
         }
 
         .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: column;
             gap: 1.5rem;
-            text-align: center;
+            width: 100%;
         }
 
         .contact-card {
@@ -115,6 +115,7 @@
             border-left: 5px solid var(--teal);
             width: 100%;
             box-sizing: border-box;
+            text-align: center;
         }
 
         .contact-card h3 {
@@ -239,6 +240,13 @@
             background: var(--dark);
             color: var(--white);
             font-size: 0.9rem;
+        }
+
+        @media (min-width: 769px) {
+            .contact-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
         }
 
         @media (max-width: 768px) {
