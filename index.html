@@ -34,6 +34,33 @@
             border-bottom: 4px solid var(--teal);
         }
 
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            background-color: var(--white);
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 0.8rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .sticky-nav a {
+            color: var(--dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95srem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: color 0.2s ease;
+        }
+
+        .sticky-nav a:hover {
+            color: var(--teal);
+        }
+
         .logo-area h1 {
             font-size: 3rem;
             color: var(--purple);
@@ -296,6 +323,14 @@
         <p class="sub-tagline">Servicing Indiana locally and the World remotely.
         <div class="hours-badge">Sunday – Thursday <br> 10:00 AM – 4:00 PM</div>
     </header>
+
+    <nav class="sticky-nav">
+        <a href="#contact">Contact</a>
+        <a href="#vault">Vault</a>
+        <a href="#retail">Retail/Repair</a>
+        <a href="#b2b">B2B</a>
+        <a href="#tips">Tips</a>
+    </nav>
 
     <main>
         <!-- Contact Section -->
