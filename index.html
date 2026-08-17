@@ -14,6 +14,10 @@
             --border-color: #333333;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -51,7 +55,7 @@
             color: var(--dark);
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.95srem;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             transition: color 0.2s ease;
@@ -167,7 +171,7 @@
             color: var(--dark);
             font-weight: bold;
             text-decoration: none;
-            word-break: break-word; /* Prevents long emails from breaking layouts */
+            word-break: break-word;
             overflow-wrap: break-word;
             display: inline-block;
             max-width: 100%;
@@ -320,13 +324,12 @@
             <div class="tech-box">Tech</div>
         </div>
         <p class="tagline">Genuine Tech Repair & Consultation</p>
-        <p class="sub-tagline">Servicing Indiana locally and the World remotely.
+        <p class="sub-tagline">Servicing Indiana locally and the World remotely.</p>
         <div class="hours-badge">Sunday – Thursday <br> 10:00 AM – 4:00 PM</div>
     </header>
 
     <nav class="sticky-nav">
         <a href="#contact">Contact</a>
-        <a href="#vault">Vault</a>
         <a href="#retail">Retail/Repair</a>
         <a href="#b2b">B2B</a>
         <a href="#tips">Tips</a>
@@ -334,7 +337,7 @@
 
     <main>
         <!-- Contact Section -->
-        <section>
+        <section id="contact">
             <h2>Get in Touch</h2>
             <p class="section-intro">Reach out to us directly for professional support, diagnostics, and appointments.</p>
             <div class="contact-grid">
@@ -350,7 +353,7 @@
         </section>
 
         <!-- Retail & In-Shop Services -->
-        <section>
+        <section id="retail">
             <h2>Retail & In-Shop Services</h2>
             <p class="section-intro">Professional troubleshooting, custom builds, and routine maintenance for your home or personal computers.</p>
             
@@ -398,7 +401,7 @@
         </section>
 
         <!-- B2B Services -->
-        <section>
+        <section id="b2b">
             <h2>B2B Contractor Services</h2>
             <p class="section-intro">Specialized contract solutions to support business operations, growth, administrative management, and technical coverage.</p>
             
@@ -464,7 +467,7 @@
         </section>
 
         <!-- Driver's Tips Section -->
-        <section>
+        <section id="tips">
             <h2>Driver's Tips</h2>
             <p class="section-intro">Quick advice and best practices from our technical experts.</p>
             <div class="tips-grid">
