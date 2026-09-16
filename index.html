@@ -299,6 +299,68 @@
             padding-top: 0.75rem;
         }
 
+        .bots-section {
+          padding: 60px 20px;
+          max-width: 1200px;
+          margin: 0 auto;
+        }
+        
+        .neon-heading {
+          color: #c084fc; /* Matches your current purple */
+          text-align: center;
+          font-size: 2.2rem;
+          margin-bottom: 10px;
+          letter-spacing: 1px;
+        }
+        
+        .sub-heading {
+          color: #e2e8f0;
+          text-align: center;
+          font-size: 1rem;
+          margin-bottom: 40px;
+        }
+        
+        .bots-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 25px;
+          justify-content: center;
+        }
+        
+        .service-card {
+          background-color: #1a1a1a;
+          border: 1px solid #4c1d95; /* Deep purple border */
+          border-radius: 8px;
+          padding: 25px;
+          text-align: left;
+        }
+        
+        .bot-img {
+          width: 100%;
+          border-radius: 4px;
+          margin-bottom: 20px;
+          display: block;
+        }
+        
+        .card-title {
+          color: #c084fc;
+          margin-bottom: 12px;
+          font-size: 1.3rem;
+        }
+        
+        .card-desc {
+          color: #cbd5e1;
+          font-size: 0.95rem;
+          margin-bottom: 20px;
+          line-height: 1.5;
+        }
+        
+        .card-price {
+          color: #2dd4bf; /* Matches your cyan/teal pricing text */
+          font-weight: 700;
+          font-size: 1.1rem;
+          display: block;
+        }
         /* Tips Grid */
         .tips-grid {
             display: grid;
@@ -354,8 +416,8 @@
 <body>
     
     <div style="background: var(--purple); color: #000; text-align: center; padding: 0.5rem 1rem; font-size: 0.9rem; font-weight: 600;">
-        Looking for enterprise P&L audits or dedicated executive strategy? 
-        <a href="https://driverstechconsulting.com" target="_blank" style="color: #000; text-decoration: underline; margin-left: 0.5rem;">Visit Driver's Tech Consulting &rarr;</a>
+        Check out Driver's Bots!
+        
     </div>
     
     <header>
@@ -371,9 +433,9 @@
     <nav class="sticky-nav">
         <a href="#contact">Contact</a>
         <a href="#retail">Retail/Repair</a>
+        <a href="#bots">DRIVER'S BOTS</a>
         <a href="#b2b">B2B</a>
-        <a href="#tips">Tips</a>
-        <a href="https://driverstechconsulting.com" target="_blank" style="color: #ffffff;">Executive Business Consulting &rarr;</a>
+        <a href="#tips">Computer Tips</a>
     </nav>
 
     <main>
@@ -447,6 +509,32 @@
             </table>
         </section>
 
+        <!-- Driver's Bots Section -->
+        <section id="bots" class="bots-section">
+          <div class="section-header">
+            <h2 class="neon-heading">Driver's Bots</h2>
+            <p class="sub-heading">Commercial robotics sales with maintenance packages. No RaaS or Subscription lock-ins.</p>
+          </div>
+        
+          <div class="bots-grid">
+            <!-- Unitree Card -->
+            <div class="service-card">
+              <img src="Unitree_Bots_1.jpg" alt="Unitree Humanoid Platform" class="bot-img">
+              <img src="Unitree_Bots_2.jpg" alt="Unitree Quadroped Platform And Attachments" class="bot-img">
+              <h3 class="card-title">Unitree</h3>
+              <p class="card-desc">Advanced platforms for entertainment, security presence and inspection.</p>
+              <span class="card-price">Find a model you love? Give us a call!</span>
+            </div>
+        
+            <!-- Pudu Card -->
+            <div class="service-card">
+              <h3 class="card-title">More To Come</h3>
+              <p class="card-desc">More To Come</p>
+              <span class="card-price">Find a model you love? Give us a call!</span>
+            </div>
+          </div>
+        </section>
+        
         <!-- B2B Services -->
         <section id="b2b">
             <h2>B2B Contractor Services</h2>
