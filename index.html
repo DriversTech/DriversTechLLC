@@ -321,45 +321,48 @@
         }
         
         .bots-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 25px;
-          justify-content: center;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            width: 100%;
         }
         
         .service-card {
-          background-color: #1a1a1a;
-          border: 1px solid #4c1d95; /* Deep purple border */
-          border-radius: 8px;
-          padding: 25px;
-          text-align: left;
+            background-color: #1a1a1a;
+            border: 1px solid #4c1d95; /* Deep purple border */
+            border-radius: 8px;
+            padding: 25px;
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
         }
         
         .bot-img {
-          width: 100%;
-          border-radius: 4px;
-          margin-bottom: 20px;
-          display: block;
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            display: block;
         }
         
         .card-title {
-          color: #c084fc;
-          margin-bottom: 12px;
-          font-size: 1.3rem;
+            color: #c084fc;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
         }
         
         .card-desc {
-          color: #cbd5e1;
-          font-size: 0.95rem;
-          margin-bottom: 20px;
-          line-height: 1.5;
+            color: #cbd5e1;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            line-height: 1.5;
         }
         
         .card-price {
-          color: #2dd4bf; /* Matches your cyan/teal pricing text */
-          font-weight: 700;
-          font-size: 1.1rem;
-          display: block;
+            color: #2dd4bf; /* Matches your cyan/teal pricing text */
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: block;
         }
         /* Tips Grid */
         .tips-grid {
@@ -513,7 +516,7 @@
         <section id="bots" class="bots-section">
           <div class="section-header">
             <h2 class="neon-heading">Driver's Bots</h2>
-            <p class="sub-heading">Commercial robotics sales with maintenance packages. No RaaS or Subscription lock-ins.</p>
+            <p class="sub-heading">Commercial robotics sales. No RaaS or Subscription lock-ins.</p>
           </div>
         
           <div class="bots-grid">
@@ -526,13 +529,6 @@
               <span class="card-price">Find a model you love? Give us a call!</span>
             </div>
         
-            <!-- Pudu Card -->
-            <div class="service-card">
-              <h3 class="card-title">More To Come</h3>
-              <p class="card-desc">More To Come</p>
-              <span class="card-price">Find a model you love? Give us a call!</span>
-            </div>
-          </div>
         </section>
         
         <!-- B2B Services -->
